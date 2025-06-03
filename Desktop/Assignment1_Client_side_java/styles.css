@@ -1,21 +1,25 @@
+/* Google font for an arcade look */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+/* Body background and base styles */
 body {
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', cursive; 
   background: radial-gradient(circle, #000000 0%, #0f0f0f 100%);
-  color: #39ff14;
+  color: #39ff14; 
   text-align: center;
   padding: 40px 20px;
   margin: 0;
 }
 
+/* Big title at the top */
 h1 {
   font-size: 1.5rem;
-  color: #ff00cc;
-  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc;
+  color: #ff00cc; 
+  text-shadow: 0 0 5px #ff00cc, 0 0 10px #ff00cc; 
   margin-bottom: 30px;
 }
 
+/* Container that holds all the columns */
 .columns {
   display: flex;
   justify-content: center;
@@ -24,30 +28,34 @@ h1 {
   margin-bottom: 30px;
 }
 
+/* Each vertical stack of buttons */
 .column {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+/* Button styles */
 button {
-  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  background: linear-gradient(45deg, #ff00cc, #3333ff); /* Pink to blue gradient */
   color: #fff;
   font-size: 0.65rem;
   padding: 14px 10px;
   border: 2px solid #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14; /* Glowing effect */
   cursor: pointer;
   transition: transform 0.2s, background 0.3s;
 }
 
+/* What happens when you hover over a button */
 button:hover {
   transform: scale(1.1);
-  background: linear-gradient(45deg, #00ffff, #ff00cc);
+  background: linear-gradient(45deg, #00ffff, #ff00cc); /* Cyan to pink */
   box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
 }
 
+/* "Surprise" and "Clear" button layout */
 .controls {
   margin-top: 25px;
   display: flex;
@@ -56,6 +64,7 @@ button:hover {
   flex-wrap: wrap;
 }
 
+/* The sentence that appears after picking words */
 #storyOutput {
   font-size: 1rem;
   font-weight: bold;
