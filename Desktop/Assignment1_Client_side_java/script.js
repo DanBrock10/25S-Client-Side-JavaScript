@@ -12,3 +12,11 @@ function select(column, index) {
   selected[column] = phrases[column][index];
   updateStory();
 }
+
+function surprise() {
+  for (var i = 0; i < phrases.length; i++) {
+    var rand = Math.floor(Math.random() * phrases[i].length);
+    selected[i] = phrases[i][rand];
+  }
+  updateStory();
+}
