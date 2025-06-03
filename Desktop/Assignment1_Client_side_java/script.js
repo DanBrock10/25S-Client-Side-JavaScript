@@ -25,3 +25,8 @@ function clearStory() {
   selected = ["", "", "", "", ""];
   document.getElementById("storyOutput").innerText = "";
 }
+
+function updateStory() {
+  var story = selected.join(" ");
+  document.getElementById("storyOutput").innerText = story;
+}
