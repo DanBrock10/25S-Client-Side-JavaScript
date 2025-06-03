@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: radial-gradient(circle, #000000 0%, #0f0f0f 100%);
+  color: #39ff14;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+}
