@@ -7,3 +7,8 @@ var phrases = [
 ];
 
 var selected = ["", "", "", "", ""];
+
+function select(column, index) {
+  selected[column] = phrases[column][index];
+  updateStory();
+}
