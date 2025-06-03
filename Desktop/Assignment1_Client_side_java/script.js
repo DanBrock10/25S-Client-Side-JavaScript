@@ -20,3 +20,8 @@ function surprise() {
   }
   updateStory();
 }
+
+function clearStory() {
+  selected = ["", "", "", "", ""];
+  document.getElementById("storyOutput").innerText = "";
+}
