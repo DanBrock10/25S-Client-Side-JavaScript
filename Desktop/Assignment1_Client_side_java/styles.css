@@ -55,3 +55,16 @@ button:hover {
   gap: 15px;
   flex-wrap: wrap;
 }
+
+#storyOutput {
+  font-size: 1rem;
+  font-weight: bold;
+  background: #111;
+  color: #39ff14;
+  margin-top: 40px;
+  padding: 20px;
+  border: 2px solid #ff00cc;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff00cc;
+}
