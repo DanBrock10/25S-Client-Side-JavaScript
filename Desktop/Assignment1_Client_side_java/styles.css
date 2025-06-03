@@ -29,3 +29,15 @@ h1 {
   flex-direction: column;
   gap: 12px;
 }
+
+button {
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 14px 10px;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
