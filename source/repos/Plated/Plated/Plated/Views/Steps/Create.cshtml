@@ -1,0 +1,68 @@
+﻿@model Plated.Models.Step
+
+@{
+    ViewData["Title"] = "Create Step";
+}
+
+<h1>Create Step</h1>
+<hr />
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Steps" asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="StepOrder" class="control-label"></label>
+                <input asp-for="StepOrder" class="form-control" />
+                <span asp-validation-for="StepOrder" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RecipeId" class="control-label"></label>
+                <select asp-for="RecipeId" class="form-control" asp-items="@(ViewData["RecipeId"] as SelectList)">
+                    <option value="">-- Select Recipe --</option>
+                </select>
+                <span asp-validation-for="RecipeId" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-success">Create</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        // OPTIONAL: Uncomment to disable unobtrusive validation during debugging
+        // $.validator.unobtrusive.parse = function () { };
+
+        $("form").on("submit", function () {
+            console.log("✅ Form submit triggered!");
+        });
+    </script>
+}

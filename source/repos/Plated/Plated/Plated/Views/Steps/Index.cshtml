@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Plated.Models.Step>
+
+@{
+    ViewData["Title"] = "Steps";
+}
+
+<h1>Steps</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New Step</a>
+</p>
+
+@if (!Model.Any())
+{
+    <p>No steps found.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.First().StepOrder)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Description)</th>
+                <th>@Html.DisplayNameFor(model => model.First().Recipe.Title)</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StepOrder</td>
+                    <td>@item.Description</td>
+                    <td>@item.Recipe.Title</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.StepId" class="btn btn-warning">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.StepId" class="btn btn-info">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.StepId" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
