@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Plated")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5c844564d020e01491c22267cf891f8801dd906")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd14fadcba4a74c3ea77dc917609f25663421233")]
 [assembly: System.Reflection.AssemblyProductAttribute("Plated")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Plated")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
